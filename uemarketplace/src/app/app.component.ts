@@ -148,52 +148,6 @@ export class AppComponent {
             .sort((a, b) => a.name > b.name);
     }
 
-    private sortTitle(direction: string): void {
-        this.dataSource = this.dataSource.sort((a, b) => {
-            const aTitle = a.title.toUpperCase();
-            const bTitle = b.title.toUpperCase();
-
-            if (aTitle < bTitle) {
-                if (direction == 'asc') {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            } else if (aTitle > bTitle) {
-                if (direction == 'asc') {
-                    return 1;
-                } else {
-                    return -1;
-                }
-            } else {
-                return 0;
-            }
-        });
-    }
-
-    private sortPrice(direction: string): void {
-        this.dataSource = this.dataSource.sort((a, b) => {
-            const aPrice = a.priceValue;
-            const bPrice = b.priceValue;
-
-            if (aPrice < bPrice) {
-                if (direction == 'asc') {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            } else if (aPrice > bPrice) {
-                if (direction == 'asc') {
-                    return 1;
-                } else {
-                    return -1;
-                }
-            } else {
-                return 0;
-            }
-        });
-    }
-
     private reload(): void {
         this.dataSource = [...this.content];
 
@@ -228,23 +182,30 @@ export class AppComponent {
                 this.sortPrice('asc');
                 break;
             case SortOption.DiscountHl:
+                this.sortByDiscount('desc');
                 break;
             case SortOption.Newest:
                 break;
             case SortOption.Oldest:
                 break;
             case SortOption.RatingHl:
+                this.sortByRating('desc');
                 break;
             case SortOption.RatingLh:
+                this.sortByRating('asc');
                 break;
             case SortOption.ReviewsHl:
+                this.sortByReviews('desc');
                 break;
             case SortOption.ReviewsLh:
+                this.sortByReviews('asc');
                 break;
             default:
                 break;
         }
     }
+
+    // FILTERING
 
     private filterCategory(): any[] {
         if (this.filterCategories.length === 0) {
@@ -330,6 +291,123 @@ export class AppComponent {
 
         return this.dataSource.filter((item) => {
             return item.discount;
+        });
+    }
+
+    // SORTING
+
+    private sortTitle(direction: string): void {
+        this.dataSource = this.dataSource.sort((a, b) => {
+            const aTitle = a.title.toUpperCase();
+            const bTitle = b.title.toUpperCase();
+
+            if (aTitle < bTitle) {
+                if (direction == 'asc') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (aTitle > bTitle) {
+                if (direction == 'asc') {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    private sortPrice(direction: string): void {
+        this.dataSource = this.dataSource.sort((a, b) => {
+            const aPrice = a.priceValue;
+            const bPrice = b.priceValue;
+
+            if (aPrice < bPrice) {
+                if (direction == 'asc') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (aPrice > bPrice) {
+                if (direction == 'asc') {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    private sortByRating(direction: string): void {
+        this.dataSource = this.dataSource.sort((a, b) => {
+            const A = a.rating ? a.rating.averageRating : 0;
+            const B = b.rating ? b.rating.averageRating : 0;
+
+            if (A < B) {
+                if (direction == 'asc') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (A > B) {
+                if (direction == 'asc') {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    private sortByReviews(direction: string): void {
+        this.dataSource = this.dataSource.sort((a, b) => {
+            const A = a.rating ? a.rating.total : 0;
+            const B = b.rating ? b.rating.total : 0;
+
+            if (A < B) {
+                if (direction == 'asc') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (A > B) {
+                if (direction == 'asc') {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            } else {
+                return 0;
+            }
+        });
+    }
+
+    private sortByDiscount(direction: string): void {
+        this.dataSource = this.dataSource.sort((a, b) => {
+            const A = a.discountPriceValue;
+            const B = b.discountPriceValue;
+
+            if (A < B) {
+                if (direction == 'asc') {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            } else if (A > B) {
+                if (direction == 'asc') {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            } else {
+                return 0;
+            }
         });
     }
 }
