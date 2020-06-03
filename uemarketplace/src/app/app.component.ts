@@ -39,6 +39,8 @@ export class AppComponent {
     content = items['default'];
 
     pageEvent: PageEvent;
+    pageIndex = 0;
+    pageSize = 10;
 
     categories = [];
 
@@ -59,6 +61,10 @@ export class AppComponent {
 
     public page(event: PageEvent) {
         this.pageEvent = event;
+        if (event) {
+            this.pageIndex = event.pageIndex;
+            this.pageSize = event.pageSize;
+        }
         this.reload();
     }
 
@@ -112,6 +118,7 @@ export class AppComponent {
         this.filterAvgRating = null;
         this.filterReviews = null;
         this.checked = false;
+        this.page(null);
         this.reload();
     }
 
@@ -277,7 +284,9 @@ export class AppComponent {
 
     private slicePage() {
         if (!this.pageEvent) {
-            this.dataSource = this.dataSource.slice(0, 10);
+            this.pageIndex = 0;
+            this.pageSize = 10;
+            this.dataSource = this.dataSource.slice(this.pageIndex, this.pageSize);
         } else {
             const next = this.pageEvent.pageIndex * this.pageEvent.pageSize;
             this.dataSource = this.dataSource.slice(next, next + this.pageEvent.pageSize);
