@@ -1,0 +1,162 @@
+{
+                "id": "851c3f7751a845b792b472ec97e95000",
+                "catalogItemId": "9cd016b3ea174678b05a614c827edf82",
+                "namespace": "ue",
+                "title": "Control Rig Mannequin",
+                "recurrence": "ONCE",
+                "currencyCode": "CAD",
+                "priceValue": 0,
+                "keyImages": [
+                    {
+                        "type": "Screenshot",
+                        "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ControlRigMannequinSS01-1920x1080-d99b26577471bf5935e75f64cfe1fb36.png",
+                        "md5": "d99b26577471bf5935e75f64cfe1fb36",
+                        "width": 1920,
+                        "height": 1080,
+                        "size": 1000381,
+                        "uploadedDate": "2020-05-22T20:30:35.697Z"
+                    },
+                    {
+                        "type": "Screenshot",
+                        "url": "https://cdn1.epicgames.com/ue/product/Screenshot/ControlRigMannequinSS02-1920x1080-47fe96e49a7536d15e2533985e0887f3.png",
+                        "md5": "47fe96e49a7536d15e2533985e0887f3",
+                        "width": 1920,
+                        "height": 1080,
+                        "size": 1156638,
+                        "uploadedDate": "2020-05-22T20:30:36.232Z"
+                    },
+                    {
+                        "type": "Thumbnail",
+                        "url": "https://cdn1.epicgames.com/ue/product/Thumbnail/ControlRigMannequin_thumb-284x284-4fecaca6a8eafda2d069d3e11f4688d4.png",
+                        "md5": "4fecaca6a8eafda2d069d3e11f4688d4",
+                        "width": 284,
+                        "height": 284,
+                        "size": 130860,
+                        "uploadedDate": "2020-05-22T20:30:36.669Z"
+                    },
+                    {
+                        "type": "Featured",
+                        "url": "https://cdn1.epicgames.com/ue/product/Featured/ControlRigMannequin_featured-894x488-aa1620336d12a4c593ed20b860435080.png",
+                        "md5": "aa1620336d12a4c593ed20b860435080",
+                        "width": 894,
+                        "height": 488,
+                        "size": 371388,
+                        "uploadedDate": "2020-05-22T20:30:36.769Z"
+                    },
+                    {
+                        "type": "Snapshot",
+                        "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ControlRigMannequinSS01-1920x1080-d99b26577471bf5935e75f64cfe1fb36_Snapshot.png",
+                        "md5": "e9c1f26c70fb801af183e64230db162d",
+                        "width": 150,
+                        "height": 74,
+                        "size": 6568,
+                        "uploadedDate": "2020-05-22T20:30:36.061Z"
+                    },
+                    {
+                        "type": "Snapshot",
+                        "url": "https://cdn1.epicgames.com/ue/product/Snapshot/ControlRigMannequinSS02-1920x1080-47fe96e49a7536d15e2533985e0887f3_Snapshot.png",
+                        "md5": "c8b006cbaed0578be75767c36f9bd4bc",
+                        "width": 150,
+                        "height": 74,
+                        "size": 7002,
+                        "uploadedDate": "2020-05-22T20:30:36.591Z"
+                    }
+                ],
+                "effectiveDate": "2020-06-02T18:26:29.372Z",
+                "seller": {
+                    "id": "o-aa83a0a9bc45e98c80c1b1c9d92e9e",
+                    "owner": "311cffd7000046919e47765426990332",
+                    "status": "ACTIVE",
+                    "accepted": [
+                        {
+                            "ns": "ue",
+                            "custom": false
+                        }
+                    ],
+                    "financeCheckExempted": true,
+                    "name": "Epic Games",
+                    "supportEmail": "marketplace-support@unrealengine.com"
+                },
+                "description": "This sample project demonstrates an example Control Rig for Unreal Engine 4's default mannequin.",
+                "technicalDetails": "<p>Features:</p><ul><li>Full Control Rig for the UE Mannequin</li><li> Example scene including a control rig sequence of the posed UE Mannequin</li></ul><p>Rigged: Yes</p><p>Rigged to Epic skeleton: Yes</p><p>Animated: Yes, one sequencer control rig animation included</p><p>Number of Animations: 1</p><p>Number of characters: 1</p><p>Supported Development Platforms:</p><p>Windows: Yes</p><p>Mac: No</p>",
+                "longDescription": "<p>Deconstruct and learn how to make an animation rig using Control Rig node graphs. Use the Mannequin Control Rig in Sequencer to create game-ready animations completely in UE4.</p><p><br /></p><p>Licensed for use only with Unreal Engine-based products.</p>",
+                "isFeatured": false,
+                "isCatalogItem": false,
+                "categories": [
+                    {
+                        "path": "assets/characters",
+                        "name": "Characters"
+                    }
+                ],
+                "bundle": false,
+                "releaseInfo": [
+                    {
+                        "id": "bf0048bdb66045aa968762e829b500a5",
+                        "appId": "ControlRigMannequin",
+                        "compatibleApps": [
+                            "UE_4.25"
+                        ],
+                        "platform": [
+                            "Windows",
+                            "Mac"
+                        ],
+                        "dateAdded": "2020-05-22T00:00:00.000Z",
+                        "releaseNote": "",
+                        "versionTitle": "Control Rig Mannequin 4.25"
+                    }
+                ],
+                "platforms": [
+                    {
+                        "key": "windows",
+                        "value": "Windows 64-bit"
+                    },
+                    {
+                        "key": "apple",
+                        "value": "MacOS"
+                    }
+                ],
+                "compatibleApps": [
+                    "4.25"
+                ],
+                "urlSlug": "control-rig-mannequin",
+                "purchaseLimit": 1,
+                "tax": 0,
+                "tags": [
+                    7,
+                    3597,
+                    11885
+                ],
+                "commentRatingId": "9cd016b3ea174678b05a614c827edf82",
+                "ratingId": "851c3f7751a845b792b472ec97e95000",
+                "klass": "",
+                "isNew": true,
+                "free": true,
+                "discounted": false,
+                "featured": "https://cdn1.epicgames.com/ue/product/Featured/ControlRigMannequin_featured-894x488-aa1620336d12a4c593ed20b860435080.png",
+                "thumbnail": "https://cdn1.epicgames.com/ue/product/Thumbnail/ControlRigMannequin_thumb-284x284-4fecaca6a8eafda2d069d3e11f4688d4.png",
+                "learnThumbnail": "https://cdn1.epicgames.com/ue/product/Featured/ControlRigMannequin_featured-894x488-aa1620336d12a4c593ed20b860435080.png",
+                "headerImage": "https://cdn1.epicgames.com/ue/product/Screenshot/ControlRigMannequinSS01-1920x1080-d99b26577471bf5935e75f64cfe1fb36.png",
+                "status": "ACTIVE",
+                "ownedCount": 0,
+                "canPurchase": true,
+                "owned": false,
+                "price": "$0.00",
+                "discount": null,
+                "discountPrice": null,
+                "rating": {
+                    "targetId": "851c3f7751a845b792b472ec97e95000",
+                    "averageRating": 4.33,
+                    "rating5": 5,
+                    "rating4": 0,
+                    "rating3": 0,
+                    "rating2": 0,
+                    "rating1": 1,
+                    "legacyRatingNum": 0,
+                    "rating5Percent": 83.33,
+                    "rating4Percent": 0,
+                    "rating3Percent": 0,
+                    "rating2Percent": 0,
+                    "rating1Percent": 16.67,
+                    "total": 6
+                }
+            }
