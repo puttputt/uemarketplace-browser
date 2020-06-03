@@ -26,6 +26,12 @@
                 </div>
 
                 <div class="price-filter">
+                    <h4>On Sale</h4>
+                    <mat-slide-toggle class="example-margin" [checked]="filterOnSale" (change)="onSaleToggle($event)">
+                    </mat-slide-toggle>
+                </div>
+
+                <div class="price-filter">
                     <h4>Min Price</h4>
                     <mat-slider
                         thumbLabel
@@ -105,5 +111,7 @@
         <div class="grid">
             <app-product class="product" *ngFor="let product of dataSource" [product]="product"></app-product>
         </div>
+        <mat-paginator [length]="length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="page($event)">
+        </mat-paginator>
     </div>
 </div>

@@ -50,6 +50,7 @@ const main = async () => {
         isNew: item?.isNew,
         free: item?.free,
         discount: item?.discounted,
+        effectiveDate: item?.effectiveDate,
       };
     });
 

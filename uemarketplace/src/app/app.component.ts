@@ -47,6 +47,7 @@ export class AppComponent {
     filterMaxPrice;
     filterAvgRating;
     filterReviews;
+    filterOnSale;
 
     checked = false;
 
@@ -111,6 +112,11 @@ export class AppComponent {
         this.filterAvgRating = null;
         this.filterReviews = null;
         this.checked = false;
+        this.reload();
+    }
+
+    public onSaleToggle($event): void {
+        this.filterOnSale = $event.checked;
         this.reload();
     }
 
@@ -192,6 +198,7 @@ export class AppComponent {
         this.dataSource = [...this.content];
 
         //apply filters
+        this.dataSource = this.filterSale();
         this.dataSource = this.filterMaxPrices();
         this.dataSource = this.filterMinPrices();
         this.dataSource = this.filterAvgRatings();
@@ -314,5 +321,15 @@ export class AppComponent {
             const next = this.pageEvent.pageIndex * this.pageEvent.pageSize;
             this.dataSource = this.dataSource.slice(next, next + this.pageEvent.pageSize);
         }
+    }
+
+    private filterSale(): any[] {
+        if (!this.filterOnSale) {
+            return this.dataSource;
+        }
+
+        return this.dataSource.filter((item) => {
+            return item.discount;
+        });
     }
 }

@@ -7,7 +7,11 @@
     /></a>
     <mat-card-content>
         <div>
-            <p>{{ product.price }}</p>
+            <p class="money" *ngIf="!product.discount">{{ product.price }}</p>
+            <p *ngIf="product.discount">
+                <span class="strike">{{ product.price }}</span>
+                <span class="money">{{ product.discountPrice }}</span>
+            </p>
         </div>
         <div>
             <p *ngIf="product.rating">
